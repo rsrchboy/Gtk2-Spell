@@ -1,0 +1,16 @@
+#
+# $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/GtkSpell/gtkspell.typemap,v 1.1 2003/04/26 03:03:24 rwmcfa1 Exp $
+#
+
+TYPEMAP
+
+GtkSpell *	T_GTK_TYPE_SPELL
+
+INPUT
+T_GTK_TYPE_SPELL
+	$var = SvGtkSpell ($arg);
+
+OUTPUT
+T_GTK_TYPE_SPELL
+	$arg = newSVGtkSpell ($var);
+
