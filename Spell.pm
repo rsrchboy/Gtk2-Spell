@@ -1,5 +1,5 @@
 #
-# $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/GtkSpell/Spell.pm,v 1.5 2003/05/30 18:43:01 rwmcfa1 Exp $
+# $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/GtkSpell/Spell.pm,v 1.7 2003/09/22 00:45:59 rwmcfa1 Exp $
 #
 
 package Gtk2::Spell;
@@ -14,7 +14,7 @@ require DynaLoader;
 
 our @ISA = qw(DynaLoader);
 
-our $VERSION = '1.00';
+our $VERSION = '1.03';
 
 sub dl_load_flags { 0x01 }
 
@@ -99,7 +99,7 @@ Copyright 2003 by the gtk2-perl team.
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Library General Public
 License as published by the Free Software Foundation; either
-version 2 of the License, or (at your option) any later version.
+version 2.1 of the License, or (at your option) any later version.
 
 This library is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of

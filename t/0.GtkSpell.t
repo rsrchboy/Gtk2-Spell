@@ -1,5 +1,5 @@
 #
-# $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/GtkSpell/t/0.GtkSpell.t,v 1.1 2003/05/27 01:20:20 rwmcfa1 Exp $
+# $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/GtkSpell/t/0.GtkSpell.t,v 1.3 2003/09/22 00:46:05 rwmcfa1 Exp $
 #
 
 #########################
@@ -7,14 +7,19 @@
 # 	- rm
 #########################
 
-#########################
-
-# change 'tests => 1' to 'tests => last_test_to_print';
-
 use Gtk2;
+use Test::More;
 
-use Test::More tests => 8;
-BEGIN { use_ok('Gtk2::Spell') };
+if( Gtk2->init_check )
+{
+	plan tests => 8;
+	require_ok('Gtk2::Spell');
+}
+else
+{
+	plan skip_all =>
+		'Gtk2->init_check failed, probably unable to open DISPLAY';
+}
 
 use constant TRUE => 1;
 use constant FALSE => 0;
@@ -61,3 +66,23 @@ Glib::Idle->add( sub {
 	});
 
 Gtk2->main;
+
+1;
+__END__
+
+Copyright (C) 2003 by the gtk2-perl team (see the file AUTHORS for the
+full list)
+
+This library is free software; you can redistribute it and/or modify it under
+the terms of the GNU Library General Public License as published by the Free
+Software Foundation; either version 2.1 of the License, or (at your option) any
+later version.
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU Library General Public License for more
+details.
+
+You should have received a copy of the GNU Library General Public License along
+with this library; if not, write to the Free Software Foundation, Inc., 59
+Temple Place - Suite 330, Boston, MA  02111-1307  USA.

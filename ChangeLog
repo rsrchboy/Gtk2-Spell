@@ -1,3 +1,43 @@
+2003/09/21 20:19 rwmcfa1
+
+	* version 1.03
+
+	* Makefile.PL: fixed bug in specfile generation
+	
+	* (lots of files): license updates/additions
+
+2003/09/17 10:44 rwmcfa1
+
+	* Makefile.PL: ExtUtils::PkgConfig can now deal with version 
+	requirements using pkg-config's interface, make use of it.
+
+	* t/0.GtkSpell.t: skip unless we have a display
+
+2003/09/16 23:50 rwmcfa1
+
+	* Makefile.PL, perl-*spec.in: somewhat automated versioning system 
+	implemented for depenancy modules
+
+2003/09/15 22:26 rwmcfa1
+
+	* Makefile.PL: spec file dependancies improved
+
+2003/09/06 19:23 rwmcfa1
+
+	* Makefile.PL: dist-rpms build target added
+
+	* perl-Gtk2-Spell.spec.in: initial import
+
+2003/08/24 19:21 rwmcfa1
+
+	* Spell.pm: bumped version to 1.02. was a small problem with the
+	Makefile.PL rolled into version 1.00, it's on cpan so correcting it 
+	requires a new version number/release.
+
+2003/08/18 12:34 muppetman
+
+	* debian/*: patch from james curbo adds debian packaging stuff
+
 2003/05/26 21:04 rwmcfa1
 
 	* *: Initial ChangeLog entry, now has tests preparing for release of
